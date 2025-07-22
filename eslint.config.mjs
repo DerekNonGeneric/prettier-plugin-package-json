@@ -1,4 +1,4 @@
-import base from '@nice-move/all-in-base';
+import base from '@nice-move/all-in-base/eslint';
 import ava from 'eslint-plugin-ava';
 
 export default [

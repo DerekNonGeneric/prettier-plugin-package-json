@@ -54,7 +54,7 @@ function sort(object) {
 function trimVersion(version) {
   return version
     .split('||')
-    .map((item) => item.trim().replace(/\s+/g, ' '))
+    .map((item) => item.trim().replaceAll(/\s+/g, ' '))
     .sort()
     .join(' || ');
 }
@@ -82,8 +82,8 @@ export function normalize(text) {
   delete io._id;
   delete io.readme;
 
-  if (io.license && /^unlicensed?$/i.test(io.license)) {
-    io.license = io.private ? 'UNLICENSED' : 'Unlicense';
+  if (io.license && /^unlicensed$/i.test(io.license)) {
+    io.license = io.license.toUpperCase();
   }
 
   if (haveGit(io)) {
@@ -163,9 +163,11 @@ export function normalize(text) {
   if (io.homepage && io.homepage.endsWith('#readme')) {
     io.homepage = io.homepage.replace(/#readme$/, '');
   }
+
   if (io.homepage) {
     io.homepage = io.homepage.replace(/^git\+/, '');
   }
+
   if (io.engines) {
     if (io.engines.vscode) {
       io.engines.vscode = trimVersion(io.engines.vscode);

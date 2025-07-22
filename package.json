@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -41,13 +41,13 @@
   },
   "devDependencies": {
     "@bring-it/cli": "^0.10.0",
-    "@bring-it/npm": "^0.6.0",
-    "@nice-move/all-in-base": "^0.4.23",
-    "ava": "^6.2.0",
-    "best-shot": "^0.9.12",
-    "eslint": "^9.25.1",
-    "eslint-plugin-ava": "^15.0.1",
-    "garou": "^0.9.5",
+    "@bring-it/npm": "^0.8.3",
+    "@nice-move/all-in-base": "^0.5.3",
+    "ava": "^6.4.1",
+    "best-shot": "^0.10.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-ava": "^15.1.0",
+    "garou": "^0.9.11",
     "normalize-package-data": "^7.0.0",
     "npm-normalize-package-bin": "^4.0.0",
     "prettier": "~3.5.3",
@@ -58,7 +58,7 @@
   "peerDependencies": {
     "prettier": "^3.5.3"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.13.1",
   "engines": {
     "node": ">=22.11.0 || ^20.5.0",
     "pnpm": ">=10.10.0"
